@@ -1,1 +1,11 @@
-# add files to ignore https://git-scm.com/docs/gitignore
+# jest coverage reports
+coverage/
+
+# typescript build output
+dist/
+
+# dependencies
+node_modules/
+
+# eslint
+.eslintcache

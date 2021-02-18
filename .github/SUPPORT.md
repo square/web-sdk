@@ -1,6 +1,6 @@
 # Support
 
-Working with Square APIs?
+Get help from Square:
 
 - [Forums](https://developer.squareup.com/forums/)
 - [Slack](https://buildwithsquare.slack.com)

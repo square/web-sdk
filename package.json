@@ -1,0 +1,120 @@
+{
+  "name": "@square/web-sdk",
+  "version": "0.0.0",
+  "description": "Square Web SDK",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf .eslintcache coverage/ dist/",
+    "lint": "npm-run-all --serial lint:*",
+    "lint:eslint": "eslint --ignore-path .gitignore --cache --ext .ts .",
+    "lint:prettier": "prettier --ignore-path .gitignore --check .",
+    "lint:prettier:fix": "prettier --ignore-path .gitignore --write .",
+    "test": "npm-run-all --serial lint test:* build",
+    "test:unit": "jest",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/square/web-sdk.git"
+  },
+  "keywords": [
+    "sdk",
+    "square",
+    "javascript",
+    "typescript",
+    "payments"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/square/web-sdk/issues"
+  },
+  "homepage": "https://github.com/square/web-sdk#readme",
+  "engines": {
+    "node": ">12.*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.16",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@square/prettier-config": "^1.0.0",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/parser": "^4.15.0",
+    "babel-jest": "^26.6.3",
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-square": "^17.0.0",
+    "husky": "^5.0.9",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "pinst": "^2.1.4",
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.3.9",
+    "typescript": "^4.1.5"
+  },
+  "prettier": "@square/prettier-config",
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2015
+    },
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "plugin:square/typescript"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{json,md,yml}": "prettier --write"
+  },
+  "releases": {
+    "branches": [
+      "main",
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false,
+          "tarballDir": "dist"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "dist/*.tgz",
+          "addReleases": "bottom"
+        }
+      ]
+    ]
+  }
+}
