@@ -8,7 +8,7 @@
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json",
     "clean": "rm -rf .eslintcache coverage/ dist/",
     "lint": "npm-run-all --serial lint:*",
     "lint:eslint": "eslint --ignore-path .gitignore --cache --ext .ts .",
@@ -60,6 +60,7 @@
     "pinst": "^2.1.4",
     "prettier": "^2.2.1",
     "semantic-release": "^17.3.9",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
   },
   "prettier": "@square/prettier-config",
@@ -80,7 +81,7 @@
     "*.ts": "eslint --cache --fix",
     "*.{json,md,yml}": "prettier --write"
   },
-  "releases": {
+  "release": {
     "branches": [
       "main",
       {

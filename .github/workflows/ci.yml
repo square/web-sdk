@@ -2,12 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [$default-branch]
+    branches: [main, beta]
   pull_request:
-    branches: [$default-branch]
+    branches: [main, beta]
 
 jobs:
   test:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
