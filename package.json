@@ -81,7 +81,19 @@
     "extends": [
       "plugin:square/typescript",
       "plugin:jest/recommended"
-    ]
+    ],
+    "rules": {
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "markers": [
+            "/"
+          ]
+        }
+      ],
+      "@typescript-eslint/triple-slash-reference": "off"
+    }
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
