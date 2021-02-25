@@ -5,14 +5,14 @@ function findScript(src: string): HTMLScriptElement | null {
 }
 
 function injectScript(src: string): HTMLScriptElement {
-  const script = document.createElement('script');
-  script.src = src;
-
   const headOrBody = document.head || document.body;
 
   if (!headOrBody) {
     throw new Error('Square.js requires a <body> or <head> element.');
   }
+
+  const script = document.createElement('script');
+  script.src = src;
 
   headOrBody.appendChild(script);
 

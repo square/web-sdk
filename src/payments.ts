@@ -19,7 +19,7 @@ function getSrcForApplicationId(applicationId: string): string {
     src = 'https://websdk.squarecdn.com/';
   }
 
-  if (applicationId.startsWith('sandbox-sq0idb')) {
+  if (applicationId.startsWith('sandbox-sq0idb-')) {
     src = 'https://sandbox.websdk.squarecdn.com/';
   }
 
