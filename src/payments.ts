@@ -16,11 +16,11 @@ function getSrcForApplicationId(applicationId: string): string {
   let src = '';
 
   if (applicationId.startsWith('sq0idp-')) {
-    src = 'https://websdk.squarecdn.com/';
+    src = 'https://web.squarecdn.com/';
   }
 
   if (applicationId.startsWith('sandbox-sq0idb-')) {
-    src = 'https://sandbox.websdk.squarecdn.com/';
+    src = 'https://sandbox.web.squarecdn.com/';
   }
 
   if (src.length === 0) {
