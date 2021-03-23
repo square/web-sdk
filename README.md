@@ -94,3 +94,21 @@ We use [semantic-release](https://semantic-release.gitbook.io/semantic-release/#
 [Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/recipes/pre-releases.md) about publishing pre-releases.
 
 [Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/usage/workflow-configuration.md#workflow-configuration) about expected behavior when pushing to the `main` and `beta` branches.
+
+## License
+
+```plaintext
+Copyright 2021 Square Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
