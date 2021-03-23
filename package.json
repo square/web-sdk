@@ -2,7 +2,6 @@
   "name": "@square/web-sdk",
   "version": "0.0.0",
   "description": "Square Web SDK",
-  "private": true,
   "type": "module",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
@@ -123,7 +122,6 @@
       [
         "@semantic-release/npm",
         {
-          "npmPublish": false,
           "tarballDir": "dist"
         }
       ],
