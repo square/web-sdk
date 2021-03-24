@@ -1,6 +1,9 @@
 # web-sdk
 
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![LICENSE](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/square/web-sdk/blob/main/LICENSE)
+[![CI](https://github.com/square/web-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/square/web-sdk/actions/workflows/ci.yml)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Development
 
@@ -86,8 +89,26 @@ npm run build
 
 ## Releasing
 
-TODO: document [semantic-release](https://semantic-release.gitbook.io/semantic-release/#highlights)
+We use [semantic-release](https://semantic-release.gitbook.io/semantic-release/#highlights) to automatically create changelogs from commits, publish to npm, and create GitHub releases.
 
 [Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/recipes/pre-releases.md) about publishing pre-releases.
 
-[Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/usage/workflow-configuration.md#workflow-configuration) about expected behavior when pushing to the `main` and `next` branches.
+[Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/usage/workflow-configuration.md#workflow-configuration) about expected behavior when pushing to the `main` and `beta` branches.
+
+## License
+
+```plaintext
+Copyright 2021 Square Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

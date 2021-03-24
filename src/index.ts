@@ -1,3 +1,1 @@
-export function payments(): void {
-  console.log('🔜');
-}
+export * from './payments';

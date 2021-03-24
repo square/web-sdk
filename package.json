@@ -2,13 +2,12 @@
   "name": "@square/web-sdk",
   "version": "0.0.0",
   "description": "Square Web SDK",
-  "private": true,
   "type": "module",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json",
     "clean": "rm -rf .eslintcache coverage/ dist/",
     "lint": "npm-run-all --serial lint:*",
     "lint:eslint": "eslint --ignore-path .gitignore --cache --ext .ts .",
@@ -51,6 +50,7 @@
     "babel-jest": "^26.6.3",
     "conventional-changelog-conventionalcommits": "^4.5.0",
     "eslint": "^7.19.0",
+    "eslint-plugin-jest": "^24.1.5",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-square": "^17.0.0",
     "husky": "^5.0.9",
@@ -60,6 +60,7 @@
     "pinst": "^2.1.4",
     "prettier": "^2.2.1",
     "semantic-release": "^17.3.9",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
   },
   "prettier": "@square/prettier-config",
@@ -72,15 +73,32 @@
     "env": {
       "browser": true
     },
+    "plugins": [
+      "square",
+      "jest"
+    ],
     "extends": [
-      "plugin:square/typescript"
-    ]
+      "plugin:square/typescript",
+      "plugin:jest/recommended"
+    ],
+    "rules": {
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "markers": [
+            "/"
+          ]
+        }
+      ],
+      "@typescript-eslint/triple-slash-reference": "off"
+    }
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{json,md,yml}": "prettier --write"
   },
-  "releases": {
+  "release": {
     "branches": [
       "main",
       {
@@ -104,7 +122,6 @@
       [
         "@semantic-release/npm",
         {
-          "npmPublish": false,
           "tarballDir": "dist"
         }
       ],
