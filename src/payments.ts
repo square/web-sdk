@@ -1,7 +1,8 @@
+/// <reference path='../types/index.d.ts' />
 import { loadSquare } from './load';
 import { Payments } from '@square/web-payments-sdk-types';
 
-const Version = 'v0';
+const Version = 'v1';
 
 type PaymentInitialization = (
   applicationId: string,
