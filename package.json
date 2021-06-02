@@ -5,7 +5,6 @@
   "type": "module",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "clean": "rm -rf .eslintcache coverage/ dist/",
@@ -133,5 +132,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@square/web-payments-sdk-types": "^1.1.1"
   }
 }

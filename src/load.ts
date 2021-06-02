@@ -1,4 +1,4 @@
-/// <reference path='../types/index.d.ts' />
+import { Square } from '@square/web-payments-sdk-types';
 
 function findScript(src: string): HTMLScriptElement | null {
   return document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);
