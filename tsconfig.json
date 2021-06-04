@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "typeRoots": ["./node_modules/@square/web-payments-sdk-types"],
     "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "dist/",
