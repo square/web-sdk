@@ -41,7 +41,7 @@
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-typescript": "^7.12.16",
-    "@commitlint/cli": "^11.0.0",
+    "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^11.0.0",
     "@square/prettier-config": "^1.0.0",
     "@types/jest": "^26.0.20",
