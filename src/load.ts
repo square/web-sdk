@@ -1,4 +1,4 @@
-import { Square } from '@square/web-payments-sdk-types';
+import type { Square } from './types';
 
 function findScript(src: string): HTMLScriptElement | null {
   return document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Square Web SDK",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "scripts": {
@@ -35,7 +36,7 @@
   },
   "homepage": "https://github.com/square/web-sdk#readme",
   "engines": {
-    "node": ">12.*"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

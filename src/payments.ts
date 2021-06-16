@@ -1,12 +1,7 @@
 import { loadSquare } from './load';
-import { Payments } from '@square/web-payments-sdk-types';
+import type { Payments } from './types';
 
-const Version = 'v0';
-
-type PaymentInitialization = (
-  applicationId: string,
-  locationId: string
-) => Promise<Payments | null>;
+const Version = 'v1';
 
 class InvalidApplicationIdError extends Error {
   constructor(
@@ -37,8 +32,7 @@ function getSrcForApplicationId(applicationId: string): string {
   return src;
 }
 
-// eslint-disable-next-line func-style
-const payments: PaymentInitialization = async function (
+export async function payments(
   applicationId: string,
   locationId?: string,
   overrides?: {
@@ -57,6 +51,4 @@ const payments: PaymentInitialization = async function (
   }
 
   return maybeSquare.payments(applicationId, locationId);
-};
-
-export { payments };
+}

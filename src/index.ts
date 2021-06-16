@@ -1,2 +1,4 @@
 export * from './payments';
-export * from '@square/web-payments-sdk-types';
+
+// eslint-disable-next-line import/export -- not funny business, intentional types only
+export * from './types';
