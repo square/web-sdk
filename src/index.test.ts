@@ -1,11 +1,7 @@
-import * as Index from '.';
+import * as sdk from '.';
 
-describe('Index', () => {
-  it('canary', () => {
-    expect(1 + 2).toEqual(3);
-  });
-
+describe('SDK', () => {
   it('exports payments', () => {
-    expect(Index).toHaveProperty('payments');
+    expect(sdk).toHaveProperty('payments');
   });
 });

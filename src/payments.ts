@@ -1,6 +1,7 @@
 import { loadSquare } from './load';
+import type { Payments } from './types';
 
-const Version = 'v0';
+const Version = 'v1';
 
 class InvalidApplicationIdError extends Error {
   constructor(

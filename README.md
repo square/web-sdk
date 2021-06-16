@@ -2,6 +2,7 @@
 
 [![LICENSE](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/square/web-sdk/blob/main/LICENSE)
 [![CI](https://github.com/square/web-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/square/web-sdk/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/square/web-sdk/branch/beta/graph/badge.svg?token=YK448D4KX7)](https://codecov.io/gh/square/web-sdk)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
@@ -9,7 +10,7 @@
 
 ### Getting Started
 
-This project uses Node v15 as defined by `.nvmrc` to take advantage of npm@7. You can use [nvm](https://github.com/nvm-sh/nvm) to install the correct version:
+This project uses Node v16 as defined by `.nvmrc` to take advantage of npm@7. You can use [nvm](https://github.com/nvm-sh/nvm) to install the correct version:
 
 ```sh
 nvm install $(cat .nvmrc)
@@ -86,14 +87,6 @@ npm run build
 ## Continuous Integration
 
 [GitHub Actions](https://docs.github.com/en/actions) is used for our CI/CD workflows. See `.github/workflows` for details.
-
-## Releasing
-
-We use [semantic-release](https://semantic-release.gitbook.io/semantic-release/#highlights) to automatically create changelogs from commits, publish to npm, and create GitHub releases.
-
-[Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/recipes/pre-releases.md) about publishing pre-releases.
-
-[Read more](https://github.com/semantic-release/semantic-release/blob/6013a5633ecb71aac80f7b68b8e7250c5c58f7c0/docs/usage/workflow-configuration.md#workflow-configuration) about expected behavior when pushing to the `main` and `beta` branches.
 
 ## License
 

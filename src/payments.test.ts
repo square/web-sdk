@@ -1,6 +1,8 @@
 import * as Payments from './payments';
 import { loadSquare } from './load';
 
+import type { Square } from './types';
+
 jest.mock('./load');
 
 const mockLoadSquare = loadSquare as jest.MockedFunction<typeof loadSquare>;

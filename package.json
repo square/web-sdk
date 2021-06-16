@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "Square Web SDK",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "clean": "rm -rf .eslintcache coverage/ dist/",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/square/web-sdk#readme",
   "engines": {
-    "node": ">12.*"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -48,6 +48,7 @@
     "@types/jest": "^26.0.20",
     "@typescript-eslint/parser": "^4.15.0",
     "babel-jest": "^26.6.3",
+    "codecov": "^3.8.2",
     "conventional-changelog-conventionalcommits": "^4.5.0",
     "eslint": "^7.19.0",
     "eslint-plugin-jest": "^24.1.5",
@@ -133,5 +134,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@square/web-payments-sdk-types": "^1.1.1"
   }
 }

@@ -1,4 +1,4 @@
-/// <reference path='../types/index.d.ts' />
+import type { Square } from './types';
 
 function findScript(src: string): HTMLScriptElement | null {
   return document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);

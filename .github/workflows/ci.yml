@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
-          node-version: '15' # keep in sync w/ .nvmrc
+          node-version: '16' # keep in sync w/ .nvmrc
 
       - name: Get npm cache directory
         id: npm-cache
@@ -36,10 +36,17 @@ jobs:
         run: npm ci
 
       - name: Run tests
+        id: test
         run: npm test
 
+      - name: Collect coverage
+        run: npx codecov
+        continue-on-error: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
       - name: Semantic Release
-        if: success()
+        if: ${{ steps.test.conclusion == 'success' }}
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

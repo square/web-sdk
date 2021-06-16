@@ -7,7 +7,7 @@ describe('Load', () => {
     });
 
     it('memoizes loadPromise', () => {
-      const src = 'https://web.squarecdn.com/v0/square.js';
+      const src = 'https://web.squarecdn.com/v1/square.js';
       const p1 = Load.loadSquare(src);
       const p2 = Load.loadSquare(src);
 
