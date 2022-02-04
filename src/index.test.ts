@@ -1,4 +1,4 @@
-import * as sdk from '.';
+import * as sdk from '.'; // eslint-disable-line import/namespace
 
 describe('SDK', () => {
   it('exports payments', () => {
