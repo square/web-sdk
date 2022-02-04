@@ -1,5 +1,5 @@
-import { loadSquare } from './load';
-import type { Payments } from './types';
+import { loadSquare } from './load.js';
+import type { Payments } from './types.js';
 
 const Version = 'v1';
 

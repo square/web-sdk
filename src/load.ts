@@ -1,4 +1,4 @@
-import type { Square } from './types';
+import type { Square } from './types.js';
 
 function findScript(src: string): HTMLScriptElement | null {
   return document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);

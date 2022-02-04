@@ -1,4 +1,4 @@
-export * from './payments';
+export * from './payments.js';
 
-// eslint-disable-next-line import/export -- not funny business, intentional types only
-export * from './types';
+// not funny business, intentional types only
+export * from './types.js';
