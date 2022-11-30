@@ -48,7 +48,7 @@ describe('Payments', () => {
           return expected;
         },
       };
-      mockLoadSquare.mockResolvedValue((SQish as unknown) as Square);
+      mockLoadSquare.mockResolvedValue(SQish as unknown as Square);
 
       const actual = await Payments.payments('sandbox-sq0idb-...');
 
