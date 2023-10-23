@@ -55,7 +55,7 @@
     "esbuild": "^0.14.23",
     "esbuild-loader": "^2.18.0",
     "eslint": "^7.19.0",
-    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-jest": "^27.4.3",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-square": "^20.0.3",
     "husky": "^6.0.0",
