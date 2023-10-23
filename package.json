@@ -41,7 +41,7 @@
     "@babel/preset-typescript": "^7.23.2",
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
-    "@square/prettier-config": "^1.0.0",
+    "@square/prettier-config": "1.0.0",
     "@types/jest": "^29.5.6",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
