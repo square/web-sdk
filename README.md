@@ -10,13 +10,13 @@
 
 ### Getting Started
 
-This project uses Node v16 as defined by `.nvmrc` to take advantage of npm@7. You can use [nvm](https://github.com/nvm-sh/nvm) to install the correct version:
+This project uses Node.js as defined by `.nvmrc`. You can use [nvm](https://github.com/nvm-sh/nvm) to install the correct version:
 
 ```sh
 nvm install $(cat .nvmrc)
 ```
 
-Install dependencies with [npm](https://docs.npmjs.com/cli/v7) which should also install git hooks with [husky](https://typicode.github.io/husky/#/).
+Install dependencies with [npm](https://docs.npmjs.com/cli) which should also install git hooks with [husky](https://typicode.github.io/husky/#/).
 
 ```sh
 npm install

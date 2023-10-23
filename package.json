@@ -37,9 +37,6 @@
     "url": "https://github.com/square/web-sdk/issues"
   },
   "homepage": "https://github.com/square/web-sdk#readme",
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
