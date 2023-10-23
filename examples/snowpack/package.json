@@ -1,5 +1,6 @@
 {
   "name": "snowpack",
+  "private": true,
   "scripts": {
     "start": "snowpack dev"
   },
@@ -7,6 +8,6 @@
     "@square/web-sdk": "latest"
   },
   "devDependencies": {
-    "snowpack": "^3.1.2"
+    "snowpack": "^3.8.8"
   }
 }
