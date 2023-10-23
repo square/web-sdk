@@ -38,32 +38,32 @@
   },
   "homepage": "https://github.com/square/web-sdk#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
-    "@babel/preset-typescript": "^7.12.16",
-    "@commitlint/cli": "^17.6.6",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^12.1.4",
     "@square/prettier-config": "^1.0.0",
-    "@types/jest": "^26.0.20",
-    "@typescript-eslint/parser": "^4.15.0",
-    "babel-jest": "^27.0.2",
-    "codecov": "^3.8.2",
-    "conventional-changelog-conventionalcommits": "^4.5.0",
-    "esbuild": "^0.14.23",
-    "esbuild-loader": "^2.18.0",
-    "eslint": "^7.19.0",
-    "eslint-plugin-jest": "^24.1.5",
-    "eslint-plugin-prettier": "^3.3.1",
+    "@types/jest": "^26.0.24",
+    "@typescript-eslint/parser": "^4.33.0",
+    "babel-jest": "^27.5.1",
+    "codecov": "^3.8.3",
+    "conventional-changelog-conventionalcommits": "^4.6.3",
+    "esbuild": "^0.14.54",
+    "esbuild-loader": "^2.21.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.7.0",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-square": "^20.0.3",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
-    "lint-staged": "^13.2.1",
+    "lint-staged": "^13.3.0",
     "npm-run-all": "^4.1.5",
     "pinst": "^3.0.0",
-    "prettier": "^2.2.1",
-    "semantic-release": "^17.3.9",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "prettier": "^2.8.8",
+    "semantic-release": "^17.4.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   },
   "prettier": "@square/prettier-config",
   "eslintConfig": {
@@ -137,6 +137,6 @@
     ]
   },
   "dependencies": {
-    "@square/web-payments-sdk-types": "^1.1.1"
+    "@square/web-payments-sdk-types": "^1.51.4"
   }
 }
