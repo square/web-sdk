@@ -17,9 +17,7 @@
     "lint:prettier:fix": "prettier --ignore-path .gitignore --write .",
     "test": "npm-run-all --serial lint test:* build",
     "test:unit": "jest",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -37,36 +35,33 @@
     "url": "https://github.com/square/web-sdk/issues"
   },
   "homepage": "https://github.com/square/web-sdk#readme",
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
-    "@babel/preset-typescript": "^7.12.16",
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@square/prettier-config": "^1.0.0",
-    "@types/jest": "^26.0.20",
-    "@typescript-eslint/parser": "^4.15.0",
-    "babel-jest": "^27.0.2",
-    "codecov": "^3.8.2",
-    "conventional-changelog-conventionalcommits": "^4.5.0",
-    "esbuild": "^0.14.23",
-    "esbuild-loader": "^2.18.0",
-    "eslint": "^7.19.0",
-    "eslint-plugin-jest": "^24.1.5",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-square": "^20.0.3",
-    "husky": "^6.0.0",
-    "jest": "^26.6.3",
-    "lint-staged": "^13.2.1",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@square/prettier-config": "1.0.0",
+    "@types/jest": "^29.5.6",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "babel-jest": "^29.7.0",
+    "codecov": "^3.8.3",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "esbuild": "^0.19.5",
+    "esbuild-loader": "^4.0.2",
+    "eslint": "^8.52.0",
+    "eslint-plugin-jest": "^27.4.3",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-square": "^26.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.0.2",
     "npm-run-all": "^4.1.5",
-    "pinst": "^3.0.0",
-    "prettier": "^2.2.1",
-    "semantic-release": "^17.3.9",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "prettier": "^3.0.3",
+    "semantic-release": "^22.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   },
   "prettier": "@square/prettier-config",
   "eslintConfig": {
@@ -85,19 +80,7 @@
     "extends": [
       "plugin:square/typescript",
       "plugin:jest/recommended"
-    ],
-    "rules": {
-      "spaced-comment": [
-        "error",
-        "always",
-        {
-          "markers": [
-            "/"
-          ]
-        }
-      ],
-      "@typescript-eslint/triple-slash-reference": "off"
-    }
+    ]
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
@@ -140,6 +123,6 @@
     ]
   },
   "dependencies": {
-    "@square/web-payments-sdk-types": "^1.1.1"
+    "@square/web-payments-sdk-types": "^1.51.4"
   }
 }

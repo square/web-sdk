@@ -5,7 +5,7 @@ const Version = 'v1';
 
 class InvalidApplicationIdError extends Error {
   constructor(
-    message = "The Payment 'applicationId' option is not in the correct format."
+    message = "The Payment 'applicationId' option is not in the correct format.",
   ) {
     super(message);
     this.name = 'InvalidApplicationIdError';
@@ -37,12 +37,12 @@ export async function payments(
   locationId?: string,
   overrides?: {
     scriptSrc?: string;
-  }
+  },
 ): Promise<Payments | null> {
   const src =
-    overrides?.scriptSrc !== undefined
-      ? overrides.scriptSrc
-      : getSrcForApplicationId(applicationId);
+    overrides?.scriptSrc === undefined
+      ? getSrcForApplicationId(applicationId)
+      : overrides.scriptSrc;
 
   const maybeSquare = await loadSquare(src);
 

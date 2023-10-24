@@ -19,9 +19,9 @@ describe('Payments', () => {
 
     it('throws if application id is invalid and has no override', async () => {
       await expect(Payments.payments('junk-app-id')).rejects.toThrow(
-        "The Payment 'applicationId' option is not in the correct format."
+        "The Payment 'applicationId' option is not in the correct format.",
       );
-      expect(mockLoadSquare).not.toBeCalled();
+      expect(mockLoadSquare).not.toHaveBeenCalled();
     });
 
     it('allows overriding script src', async () => {
