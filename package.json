@@ -50,7 +50,7 @@
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "esbuild": "^0.19.5",
     "esbuild-loader": "^4.0.2",
-    "eslint": "^8.52.0",
+    "eslint": "^9.19.0",
     "eslint-plugin-jest": "^27.4.3",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-square": "^26.0.0",
