@@ -43,7 +43,7 @@
     "@commitlint/config-conventional": "^18.0.0",
     "@square/prettier-config": "1.0.0",
     "@types/jest": "^29.5.6",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^6.9.0",
     "babel-jest": "^29.7.0",
     "codecov": "^3.8.3",
