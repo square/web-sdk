@@ -48,7 +48,7 @@
     "babel-jest": "^29.7.0",
     "codecov": "^3.8.3",
     "conventional-changelog-conventionalcommits": "^7.0.2",
-    "esbuild": "^0.19.5",
+    "esbuild": "^0.25.0",
     "esbuild-loader": "^4.0.2",
     "eslint": "^8.52.0",
     "eslint-plugin-jest": "^27.4.3",
