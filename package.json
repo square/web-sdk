@@ -36,9 +36,9 @@
   },
   "homepage": "https://github.com/square/web-sdk#readme",
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
-    "@babel/preset-typescript": "^7.23.2",
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
     "@square/prettier-config": "1.0.0",
@@ -52,7 +52,6 @@
     "eslint": "^9.20.1",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-square": "^26.0.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "lint-staged": "^15.0.2",
@@ -64,24 +63,6 @@
     "typescript-eslint": "^8.24.1"
   },
   "prettier": "@square/prettier-config",
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 2015
-    },
-    "env": {
-      "browser": true
-    },
-    "plugins": [
-      "square",
-      "jest"
-    ],
-    "extends": [
-      "plugin:square/typescript",
-      "plugin:jest/recommended"
-    ]
-  },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{json,md,yml}": "prettier --write"

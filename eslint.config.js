@@ -3,10 +3,12 @@ import globals from 'globals';
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
-const GLOBALS_BROWSER_FIX = Object.assign({}, globals.browser, {
+// Nasty workaround for globals (https://github.com/sindresorhus/globals/issues/239)
+// due to @babel/core still using an outdated version of the library
+const GLOBALS_BROWSER_FIX = {
+  ...globals.browser,
   AudioWorkletGlobalScope: globals.browser['AudioWorkletGlobalScope '],
-});
-
+};
 delete GLOBALS_BROWSER_FIX['AudioWorkletGlobalScope '];
 
 export default tseslint.config(
@@ -22,6 +24,7 @@ export default tseslint.config(
       ecmaVersion: 2015,
       sourceType: 'module',
       globals: {
+        // ...globals.browser,
         ...GLOBALS_BROWSER_FIX,
       },
     },
