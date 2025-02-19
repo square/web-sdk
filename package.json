@@ -104,6 +104,6 @@
     ]
   },
   "dependencies": {
-    "@square/web-payments-sdk-types": "^1.58.0"
+    "@square/web-payments-sdk-types": "^1.68.1"
   }
 }
