@@ -41,7 +41,6 @@
     "@babel/preset-typescript": "^7.26.0",
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
-    "@square/prettier-config": "1.0.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^22.13.4",
     "babel-jest": "^29.7.0",
@@ -62,7 +61,9 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"
   },
-  "prettier": "@square/prettier-config",
+  "prettier": {
+    "singleQuote": true
+  },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{json,md,yml}": "prettier --write"
