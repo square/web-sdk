@@ -17,11 +17,27 @@ describe('Payments', () => {
       expect(Payments).toHaveProperty('payments');
     });
 
-    it('throws if application id is invalid and has no override', async () => {
-      await expect(Payments.payments('junk-app-id')).rejects.toThrow(
-        "The Payment 'applicationId' option is not in the correct format."
+    it('throws if application id is null and has no override', async () => {
+      // @ts-expect-error -- testing invalid type
+      await expect(Payments.payments(null)).rejects.toThrow(
+        "The Payment 'applicationId' option is not in the correct format.",
       );
-      expect(mockLoadSquare).not.toBeCalled();
+      expect(mockLoadSquare).not.toHaveBeenCalled();
+    });
+
+    it('throws if application id is passed a non-string and has no override', async () => {
+      // @ts-expect-error -- testing invalid type
+      await expect(Payments.payments(999)).rejects.toThrow(
+        "The Payment 'applicationId' option is not in the correct format.",
+      );
+      expect(mockLoadSquare).not.toHaveBeenCalled();
+    });
+
+    it('throws if application id is passed an invalid string and has no override', async () => {
+      await expect(Payments.payments('junk-app-id')).rejects.toThrow(
+        "The Payment 'applicationId' option is not in the correct format.",
+      );
+      expect(mockLoadSquare).not.toHaveBeenCalled();
     });
 
     it('allows overriding script src', async () => {
@@ -48,7 +64,7 @@ describe('Payments', () => {
           return expected;
         },
       };
-      mockLoadSquare.mockResolvedValue((SQish as unknown) as Square);
+      mockLoadSquare.mockResolvedValue(SQish as unknown as Square);
 
       const actual = await Payments.payments('sandbox-sq0idb-...');
 
