@@ -16,6 +16,10 @@ class InvalidApplicationIdError extends Error {
 function getSrcForApplicationId(applicationId: string): string {
   let src = '';
 
+  if (typeof applicationId !== 'string' || applicationId === null) {
+    throw new InvalidApplicationIdError();
+  }
+
   if (applicationId.startsWith('sq0idp-')) {
     src = 'https://web.squarecdn.com/';
   }
