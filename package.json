@@ -45,7 +45,7 @@
     "@types/node": "^22.13.4",
     "babel-jest": "^29.7.0",
     "codecov": "^3.8.3",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
     "esbuild": "^0.25.0",
     "esbuild-loader": "^4.3.0",
     "eslint": "^9.20.1",
