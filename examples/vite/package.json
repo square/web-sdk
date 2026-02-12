@@ -1,7 +1,6 @@
 {
   "name": "square-web-sdk-vite-example",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "start": "vite",
