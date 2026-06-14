@@ -12,6 +12,6 @@
     "@square/web-sdk": "latest"
   },
   "devDependencies": {
-    "vite": "^6"
+    "vite": "^8"
   }
 }
