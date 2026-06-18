@@ -1,0 +1,17 @@
+{
+  "name": "square-web-sdk-vite-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@square/web-sdk": "latest"
+  },
+  "devDependencies": {
+    "vite": "^6"
+  }
+}

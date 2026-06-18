@@ -1,1 +1,0 @@
-export { pay } from './pay';

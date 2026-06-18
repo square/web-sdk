@@ -6,7 +6,7 @@ Our `beta` git branch allows us to publish pre-releases as the `beta` tag on npm
 
 Our `main` git branch is the default distribution channel which is published as the `latest` tag on npm (i.e. `npm i @square/web-sdk@latest`). Fixes can be made directly to this branch (preferably via Pull Request). Features, including breaking changes, should be developed and tested on the `beta` branch before being merged upstream to this `main` branch.
 
-Promoting features from `beta` to `main` is a manually process but a simple script:
+Promoting features from `beta` to `main` is a manual process but a simple script:
 
 ```sh
 ./script/release.sh
